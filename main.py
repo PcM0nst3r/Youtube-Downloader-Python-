@@ -6,10 +6,10 @@ from pytube import YouTube
 yt = tk.Tk()
 yt.title('YouTube Downloader')
 yt.resizable(None, None)
-yt.geometry('400x150')
+yt.geometry('450x150')
 
 entry1 = tk.Entry(yt)
-entry1.pack(pady=10)
+entry1.pack(pady=10, ipadx=90)
 
 
 def getAudioDownload():
@@ -24,7 +24,7 @@ def getAudioDownload():
 
     video_object = YouTube(x1, on_complete_callback=complete)
 
-    label1 = tk.Label(yt, text=video_object.title)
+    label1 = tk.Label(yt, text='Got_it')
     label1.pack(pady=10)
 
     video_object.streams.get_audio_only().download()
@@ -46,10 +46,10 @@ def getHVideoDownload():
 
 
 b1=tk.Button(text='Get Audio', command=getAudioDownload)
-b1.pack()
+b1.pack(side=tkinter.LEFT, ipadx=50, padx=15)
 
 b2 = tk.Button(text='Get Video', command=getHVideoDownload)
-b2.pack()
+b2.pack(side=tkinter.RIGHT, ipadx=50, padx=15)
 
 yt.mainloop()
 
