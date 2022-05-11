@@ -11,7 +11,7 @@ pip install pytube
 ```
 
 
-after the installation just simple run the main.py or u can run it from cmd 
+after the installation just simply run the main.py or u can run it from cmd 
 
 
 ```custom 
